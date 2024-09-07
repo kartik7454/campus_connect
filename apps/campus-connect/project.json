@@ -1,0 +1,16 @@
+{
+  "name": "campus-connect",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/campus-connect",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/campus-connect/jest.config.ts"
+      }
+    }
+  }
+}
