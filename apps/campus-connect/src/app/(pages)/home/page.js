@@ -1,6 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 
 ;
+import videoplayback from '../../../../../campus-connect/videos/Snapinsta.app_video_3C4B2CC5404098BEB3DC8C0045BB878B_video_dashinit.mp4.json';
 // eslint-disable-next-line no-unused-vars
 import Prefrence from "../../../components/pefrencediv.js"
 
@@ -15,7 +16,8 @@ export default function Home() {
         <h1 className="text-2xl absolute top-96 mt-28 z-50 text-white font-bold text-center font-mono px-44">Campus Connect is the ultimate platform for students to discover and participate in exciting campus events.</h1></div>
         
         <div className="h-screen">
-        
+        <BackgroundVideo   
+             src={videoplayback} />
          
               
         </div>
