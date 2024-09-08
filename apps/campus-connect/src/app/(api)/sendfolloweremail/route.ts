@@ -40,6 +40,8 @@ export async function POST(request: NextRequest) {
 
         return NextResponse.json({ message: "Email Sent Successfully" }, { status: 200 })
     } catch (error) {
-        return NextResponse.json({ error: error.message }, { status: 400 })
+        return NextResponse.json({ error: error
+            
+         }, { status: 400 })
     }
 }

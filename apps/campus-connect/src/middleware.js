@@ -4,7 +4,7 @@ import { withAuth } from 'next-auth/middleware'
 import { NextResponse } from 'next/server'
 
 
-import type { NextRequest } from 'next/server'
+
 
 
 
@@ -12,7 +12,7 @@ import type { NextRequest } from 'next/server'
 
 export default withAuth(
  
-  async function middleware(req: NextRequest) {
+  async function middleware(req) {
    
     const isAuth = await getToken({ req })
     console.log(isAuth)
@@ -53,14 +53,14 @@ export default withAuth(
   
         return NextResponse.redirect(new URL('/prefrence', req.url))
       }
-      if (isAuth?.prefrence.length >= 1  && pathname === '/prefrence') {
+      // if (isAuth?.prefrence.length >= 1  && pathname === '/prefrence') {
   
-        return NextResponse.redirect(new URL('/', req.url))
-      }
-      if (isAuth?.type=="student" && pathname === '/chooseprofiletype') {
+      //   return NextResponse.redirect(new URL('/', req.url))
+      // }
+      // if (isAuth?.type=="student" && pathname === '/chooseprofiletype') {
         
-              return NextResponse.redirect(new URL('/', req.url))
-            }
+      //         return NextResponse.redirect(new URL('/', req.url))
+      //       }
   },
   {
     callbacks: {

@@ -5,17 +5,17 @@ import { SessionProvider } from 'next-auth/react';
 import { Session } from 'next-auth'
 
 interface Props {
-  session: Session | null
+  session: Session | null |never
 }
 
 const Home: React.FC<Props> = ({ session } ) => {
   return (
-    <>
-    {/* SessionProvider ile sarmallarız ki tüm route lara erişebilelim diye / yukarıda "use client" tanımlamayı unutma! */}
+    <div>
+    
     <SessionProvider session={session}>
       <Prefrencediv />
     </SessionProvider>
-    </>
+    </div>
   );
 };
 

@@ -15,8 +15,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html>
-      <body>
-        <div className="h-20">
+      <body className="h-20 overflow-x-hidden">
+        <div className="  ">
           <Navbar/>
         
 

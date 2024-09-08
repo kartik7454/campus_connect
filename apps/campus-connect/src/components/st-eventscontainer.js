@@ -56,10 +56,9 @@ setsponsor(session.type)
          }).filter((item)=>{
           let arr =filter
 
-          if(arr[1] =="all"){return item} 
-          if(arr[1] =="all-educational"){return item.category == "educational"} 
-          if(arr[1] =="all-sports"){return item.category == "sports"}
-          if(arr[1] =="all-events"){return item.category == "event"}
+          if(arr[1] =="all"){return item}
+          return item.category = arr[1]
+         
         
 
          }).filter((item)=>{

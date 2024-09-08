@@ -19,8 +19,8 @@ export default function Home() {
     useEffect( ()=>{
     const fetchtodo  = async ()=>{
       console.log("id")
-              console.log(id)
-            const response = await fetch ('/my-events/'+id)
+              console.log(decodeURIComponent(id))
+            const response = await fetch ('/my-events/'+decodeURIComponent(id))
             const json = await response.json()
             
             
@@ -45,8 +45,8 @@ export default function Home() {
             useEffect( ()=>{
                 const fetchtodo  = async ()=>{
                   console.log("id")
-                          console.log(id)
-                        const response = await fetch ('/getuserinfo/'+id)
+                          console.log(decodeURIComponent(id))
+                        const response = await fetch ('/getuserinfo/'+decodeURIComponent(id))
                         const json = await response.json()
                         
                         
@@ -103,7 +103,7 @@ export default function Home() {
 {user ?(<div>  
 
 <h1>{user.name}</h1> 
-
+<h1>{user.about}</h1> 
 </div>):null}
 
 <div>

@@ -30,7 +30,7 @@ export  async function GET(request:NextRequest,Props:Props) {
     // console.log("hi")
     return NextResponse.json({ msg:user }, { status: 200 });
   } catch (error) {
-    console.log(error.message);
-    return NextResponse.json({ error: error.message }, { status: 400 });
+    console.log(error);
+    return NextResponse.json({ error: error }, { status: 400 });
   }
 }
