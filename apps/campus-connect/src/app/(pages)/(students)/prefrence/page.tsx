@@ -4,11 +4,11 @@ import Prefrencediv from "../../../../components/prefrencediv.js"
 import { SessionProvider } from 'next-auth/react';
 import { Session } from 'next-auth'
 
-interface Props {
+interface props {
   session: Session | null |never
 }
 
-const Home: React.FC<Props> = ({ session } ) => {
+const Home: React.FC<props> = ({ session } ) => {
   return (
     <div>
     
