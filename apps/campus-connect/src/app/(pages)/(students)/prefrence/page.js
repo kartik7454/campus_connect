@@ -1,0 +1,50 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/jsx-key */
+"use client"
+
+import { useState,useEffect } from "react"
+import Link from "next/link";
+
+
+export default function EventsContainer(props) {
+const [pref, setpref] = useState([])
+let array =['tech', 'business','art',"sports"]  
+
+
+
+ async function  handelclick(){
+    
+  const response1 = await fetch('/setprefrence',{
+    method:"POST",
+    body :  JSON.stringify(pref) //convert to json from object
+    
+})
+   
+
+    console.log(pref)
+ }
+    return (
+      <div  >
+
+       
+{array.map((item)=>{return(<div>
+
+  <button onClick={(e)=>{
+    console.log(e.target.value)
+    let arr =  pref
+    let  alo =  arr.push(e.target.value)
+    console.log(arr)
+    setpref(arr)
+  }} type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" value={item}>{item}</button>
+</div>)})}
+       
+
+       <button onClick={()=>{handelclick()}   }>submit</button>
+        </div>
+        
+      
+    );
+  }
+
+  
