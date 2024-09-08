@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable no-unused-vars */
 import community from "../../../../lib/community.js";
 import { connectToDB } from "../../../../lib/connectDB.js";
 import { NextRequest ,NextResponse} from "next/server"
 import { useParams } from 'next/navigation'
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 interface Props {
   params: {
 id: string

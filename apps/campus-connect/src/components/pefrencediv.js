@@ -39,7 +39,7 @@ console.log(user.prefrence[0])
             
             
             },[])
-    return (<div><h1> most popular in {user?user.prefrence[0]:null}</h1>
+    return (<div><h1 className=''> most popular events  in {user?user.prefrence[0]:null}</h1>
     <div className="bg-slate-200 w-full overflow-x-hidden " >
         
         {   events?(<div >{events.filter((item)=>{return item.category ==user.prefrence[0] }).sort((a, b) =>{ 

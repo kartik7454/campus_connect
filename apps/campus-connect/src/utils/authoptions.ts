@@ -31,6 +31,7 @@ const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET!
       token.image =user1?.image
       token.type =user1?.type
       token.id = user1?.id
+      token.prefrence = user1?.prefrence
       }
 
 

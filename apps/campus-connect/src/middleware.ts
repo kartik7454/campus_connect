@@ -15,6 +15,7 @@ export default withAuth(
   async function middleware(req: NextRequest) {
    
     const isAuth = await getToken({ req })
+    console.log(isAuth)
     const pathname = req.nextUrl.pathname
    
    
@@ -46,6 +47,15 @@ export default withAuth(
     if (isAuth?.type=="not" && isAccessingSensitiveRoute) {
   
         return NextResponse.redirect(new URL('/chooseprofiletype', req.url))
+      }
+
+      if (isAuth?.prefrence.length < 0 && isAuth?.type =="student" &&isAccessingSensitiveRoute) {
+  
+        return NextResponse.redirect(new URL('/prefrence', req.url))
+      }
+      if (isAuth?.prefrence.length > 0  && pathname === '/prefrence') {
+  
+        return NextResponse.redirect(new URL('/', req.url))
       }
       if (isAuth?.type=="student" && pathname === '/chooseprofiletype') {
         

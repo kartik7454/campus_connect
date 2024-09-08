@@ -2,16 +2,16 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/jsx-key */
 "use client"
-
+import { useSession } from 'next-auth/react';
 import { useState,useEffect } from "react"
 import Link from "next/link";
 
 
-export default function EventsContainer(props) {
+export default function Prefrencediv(props) {
 const [pref, setpref] = useState([])
 let array =['tech', 'business','art',"sports"]  
 
-
+const{session,status,update}=useSession()
 
  async function  handelclick(){
     
@@ -21,6 +21,7 @@ let array =['tech', 'business','art',"sports"]
     
 })
    
+await update({prefrence:pref})
 
     console.log(pref)
  }
