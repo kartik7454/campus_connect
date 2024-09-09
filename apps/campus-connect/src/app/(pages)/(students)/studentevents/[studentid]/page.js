@@ -125,7 +125,7 @@ const session =await getUserSession()
                                         }
     return (
 
-      <div>   
+      <div className='ml-16'>   
 
 {visi?(<div className='w-96 h-96 bg-slate-200 fixed top-40 right-1/3'><div className="grid gap-6 mb-6 md:grid-cols-1 px-10 pb-20">
   <h1>details</h1>
@@ -149,16 +149,24 @@ const session =await getUserSession()
       {event?( <div>
          <button onClick={()=>{handelclick()}} className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'>like</button>
      <h1 className="inline">{event.likes?event.likes.length:0}</h1>
-      <button onClick={()=>{handelclick2()}} className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 block dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'>favourite</button>
+     
       <Link href={ "/creatorprofile/"+event.creator }><h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black">{event.creator}</h1></Link>
-        <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black">{event.title}</h1>
-        <h1 className="mb-4 text-xl font-semibold leading-none tracking-tight text-gray-900 md:text-xl lg:text-xl dark:text-black">{event.discription}</h1>
-        <h1 className="mb-4 text-xl font-semibold leading-none tracking-tight text-gray-900 md:text-xl lg:text-xl dark:text-black">{event.location}</h1>
-        <h1 className="mb-4 text-xl font-semibold leading-none tracking-tight text-gray-900 md:text-xl lg:text-xl dark:text-black">{event.price}</h1>
-        <h1 className="mb-4 text-xl font-semibold leading-none tracking-tight text-gray-900 md:text-xl lg:text-xl dark:text-black">{event.category}</h1>
-        <h1 className="mb-4 text-xl font-semibold leading-none tracking-tight text-gray-900 md:text-xl lg:text-xl dark:text-black">{event.fromdate}</h1>
-        <h1 className="mb-4 text-xl font-semibold leading-none tracking-tight text-gray-900 md:text-xl lg:text-xl dark:text-black">{event.sttime}</h1>
-        <h1 className="mb-4 text-xl font-semibold leading-none tracking-tight text-gray-900 md:text-xl lg:text-xl dark:text-black">{event.entime}</h1>
+      <h1 className="mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-2xl dark:text-black">title</h1>
+        <h1 className="">{event.title}</h1>
+        <h1 className="mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-2xl dark:text-black">description</h1>
+        <h1 className="">{event.discription}</h1>
+        <h1 className="mb-4 text-xl font-semibold leading-none tracking-tight text-gray-900 md:text-xl lg:text-xl dark:text-black">location</h1>
+        <h1 className="">{event.location}</h1>
+        <h1 className="mb-4 text-xl font-semibold leading-none tracking-tight text-gray-900 md:text-xl lg:text-xl dark:text-black">price</h1>
+        <h1 className="">{event.price}</h1>
+        <h1 className="mb-4 text-xl font-semibold leading-none tracking-tight text-gray-900 md:text-xl lg:text-xl dark:text-black">category</h1>
+        <h1 className="">{event.category}</h1>
+        <h1 className="mb-4 text-xl font-semibold leading-none tracking-tight text-gray-900 md:text-xl lg:text-xl dark:text-black">date</h1>
+        <h1 className="">{event.fromdate}</h1>
+        <h1 className="mb-4 text-xl font-semibold leading-none tracking-tight text-gray-900 md:text-xl lg:text-xl dark:text-black">starttime</h1>
+        <h1 className="">{event.sttime}</h1>
+        <h1 className="mb-4 text-xl font-semibold leading-none tracking-tight text-gray-900 md:text-xl lg:text-xl dark:text-black">end time</h1>
+        <h1 className="">{event.entime}</h1>
 
 <div>
 <div>{sponsor =="sponsor"?(<div>
@@ -168,7 +176,7 @@ const session =await getUserSession()
 
 </div>) :null}</div>
 
- <div> {sponsor =="student"?(<div><h1>student faq</h1>
+ <div> {sponsor =="student"?(<div><h1 className='font-bold text-2xl'>student faq</h1>
 
     {event.studentfaq?(event.studentfaq.map((item)=>{return(<div>
     <h1>question</h1>
@@ -183,7 +191,7 @@ const session =await getUserSession()
     })):null}</div>):null}  </div>
 
 
-   <div>{sponsor =="sponsor"?(<div><h1>sponsor faq</h1>
+   <div>{sponsor =="sponsor"?(<div><h1 className='font-bold'>sponsor faq</h1>
 
     {event.sponfaq?(event.sponfaq.map((item)=>{return(<div>
     <h1>question</h1>
@@ -210,6 +218,10 @@ const session =await getUserSession()
 
 })):null}</div>) :null}</div>
 
+ 
+ <button onClick={()=>{handelclick2()}} className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 block dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'>favourite</button>
+ <button onClick={()=>{handelclick()}} className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'>like</button>
+ <h1 className="inline">{event.likes?event.likes.length:0}</h1>
    <button  onClick={()=>{setvisi(true)}} className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'>book/pay</button>
      
 </div>

@@ -29,7 +29,8 @@
     "../../apps/campus-connect/.next/types/**/*.ts",
     "../../dist/apps/campus-connect/.next/types/**/*.ts",
     "next-env.d.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "../../.next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

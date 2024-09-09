@@ -2,6 +2,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/jsx-key */
 "use client"
+import Link from "next/link"
 import Events from "../../../../components/events"
 import { useState,useEffect } from "react"
 
@@ -63,14 +64,14 @@ import { useState,useEffect } from "react"
                         return (bhalu.includes(filter.toLowerCase()) ||bhalu2.includes(filter.toLowerCase()))  }
 
 
-            }).map((item)=>{return<Events 
+            }).map((item)=>{return<div><Link href={"/studentevents/"+item._id}><Events 
          title={item.title} 
 discription={item.discription}
 category={item.category}
 price={item.price}
 image={item.image}
 fromdate={item.fromdate}
-         />})):null}
+         /></Link></div>})):null}
             </div> 
         </div>
         

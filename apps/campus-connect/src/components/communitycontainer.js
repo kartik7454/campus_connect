@@ -48,7 +48,7 @@ export default function EventsContainer(props) {
           let arr =filter
 
           if(arr[2] =="all"){return item} 
-          return (arr[2] ==item.location)
+          return (arr[2] ==item.city)
          }).filter((item)=>{
           let arr =filter
 
