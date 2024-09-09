@@ -41,3 +41,4 @@ Campus Connect is a digital platform designed to streamline the process of event
 
 ## Additional Notes
 - Any additional setup or configuration information
+- right now thee database is empty so there might be some issues
