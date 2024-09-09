@@ -23,7 +23,7 @@ const{session,status,update}=useSession()
    
 await update({prefrence:pref})
 
-    console.log(pref)
+    if(response1.ok){window.location.href="/home"}
  }
     return (
       <div  >
