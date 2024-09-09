@@ -20,7 +20,7 @@ console.log(data)
     const image = data.get('image');
     const price = data.get('price');
     const fromdate = data.get('fromdate');
-//     ;
+ const creator = data.get('creator');
     const sttime = data.get('sttime');
     const location = data.get('location');
     const city = data.get('city');
@@ -38,7 +38,7 @@ console.log(data)
 
     const isopentosponsor = data.get("isopentosponsor");
  const pitchtech = data.get("pitchtech");
-    const event = await events.create({title:title,discription:discription,image:image,price:price,fromdate:fromdate,isopentosponsor:isopentosponsor,pitchtech:pitchtech,
+    const event = await events.create({title:title,discription:discription, creator:creator,image:image,price:price,fromdate:fromdate,isopentosponsor:isopentosponsor,pitchtech:pitchtech,
     sttime:sttime,location:location,entime:entime,category:category,studentfaq:studentfaq,sponfaq:sponfaq,offer:offer,city:city,subcategory:subcategory})
 
     return NextResponse.json({ msg: "hi" }, { status: 200 });
