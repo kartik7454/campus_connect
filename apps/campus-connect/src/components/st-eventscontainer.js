@@ -57,7 +57,7 @@ setsponsor(session.type)
           let arr =filter
 
           if(arr[1] =="all"){return item}
-          return item.category = arr[1]
+          return item.category == arr[1]
          
         
 
