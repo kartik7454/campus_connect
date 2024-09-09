@@ -107,12 +107,12 @@ export default function Home() {
 </div>):null}
 
 <div>
-<h1>other events by same organiser</h1>
+<h1 className='font-bold'>other events by same organiser</h1>
 {event?(   <div>{event.map((item)=>{return(<div> <Link href={"/studentevents/"+item._id}><h1>{item.title}</h1></Link></div>)})}</div>):null}
 </div>
 
 <div>
-<h1>communities by  organiser</h1>
+<h1 className='font-bold'>communities by  organiser</h1>
 {com?(   <div>{com.map((item)=>{return(<div> <Link href={"/communities/"+item._id}><h1>{item.title}</h1></Link></div>)})}</div>):null}
 </div>
 <button className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'>follow</button>
