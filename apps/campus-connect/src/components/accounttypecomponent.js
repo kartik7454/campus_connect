@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 "use client"
 
-import { useSession } from 'next-auth/react';
+
 import React  from 'react';
 import { useRouter } from 'next/navigation'
 
@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation'
   export default  function Accounttypcon() {
     
 
-const{session,status,update}=useSession()
+
     async function handelclick(value){
       
      
@@ -24,7 +24,7 @@ const{session,status,update}=useSession()
         
     })
     
-     await update({type:value})
+   
     
    
     const json = await response.json()
