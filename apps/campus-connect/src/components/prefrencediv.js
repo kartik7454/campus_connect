@@ -2,7 +2,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/jsx-key */
 "use client"
-import { useSession } from 'next-auth/react';
+
 import { useState,useEffect } from "react"
 import Link from "next/link";
 
@@ -11,7 +11,6 @@ export default function Prefrencediv(props) {
 const [pref, setpref] = useState([])
 let array =['tech', 'business','art',"sports"]  
 
-const{session,status,update}=useSession()
 
  async function  handelclick(){
     
@@ -21,7 +20,7 @@ const{session,status,update}=useSession()
     
 })
    
-await update({prefrence:pref})
+
 
     if(response1.ok){window.location.href="/home"}
  }
