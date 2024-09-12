@@ -22,7 +22,9 @@ const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET!
       //this will triger while session
       
 
-      if(trigger==="update"){const user1 = await prisma.user.findUnique({
+      if(trigger==="update"){
+        
+        if(token.email){ const user1 = await prisma.user.findUnique({
         where: {
           email: token.email,
         },
@@ -31,13 +33,17 @@ const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET!
       token.image =user1?.image
       token.type =user1?.type
       token.id = user1?.id
-      token.prefrence = user1?.prefrence
+      token.prefrence = user1?.prefrence}
+        
+        
+       
       }
 
 
 
       
-      if(token.type){const user1 = await prisma.user.findUnique({
+      if(token.type){
+        if(token.email){  const user1 = await prisma.user.findUnique({
         where: {
           email: token.email,
         },
@@ -48,8 +54,10 @@ const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET!
       token.followers =user1?.followers
       token.prefrence =user1?.prefrence
       token.id = user1?.id
-     console.log("token")
-   console.log(token)
+     }
+        
+        
+      
     
     }
 // this will activate when login

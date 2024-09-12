@@ -11,8 +11,7 @@ export async function POST(request: NextRequest) {
     // console.log("hii")
     // console.log(body)
     const session= await  getUserSession()
-    console.log(session)
-    const user = await prisma.user.findUnique({
+    if(session.email){const user = await prisma.user.findUnique({
         where: {
           email: session.email,
         },
@@ -36,7 +35,8 @@ export async function POST(request: NextRequest) {
             html: "<p>hbh</p>"
         }
 
-      await transporter.sendMail(mailOption)
+      await transporter.sendMail(mailOption)}
+    
 
         return NextResponse.json({ message: "Email Sent Successfully" }, { status: 200 })
     } catch (error) {
