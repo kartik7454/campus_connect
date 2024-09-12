@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {"build":"nx build campus-connect"},
+  "postinstall": "prisma generate",
   "private": true,
   "devDependencies": {
     "@angular-devkit/build-angular": "~18.2.0",
