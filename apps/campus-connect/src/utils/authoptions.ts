@@ -99,14 +99,19 @@ const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET!
     async session({ session, token }) {
      
       if (token) {
-       // set value of session == jwt
-        session.user.id = token.id
-        session.user.name = token.name
-        session.user.email = token.email
-        session.user.image = token.image
-        session.user.type = token.type
-        session.user.followers = token.followers
-        session.user.prefrence = token.prefrence  
+       
+
+       if (session.user ){  
+   const session1 = session.user as Session;
+
+        session1.id = token.id
+        session1.name = token.name
+        session1.email = token.email
+        session1.image = token.image
+        session1.type = token.type
+        session1.followers = token.followers
+        session1.prefrence = token.prefrence  }
+       
       }
       console.log("session")
       console.log(session)

@@ -17,7 +17,11 @@ const readFile = (
   if (saveLocally) {
     options.uploadDir = path.join(process.cwd(), "/public/images");
     options.filename = (name, ext, path, form) => {
-      return  path.originalFilename.toString() ;
+      if (path.originalFilename){return  path.originalFilename.toString() }
+      else {
+        // Generate a default filename if original filename is undefined
+        return `${name}-${Date.now()}${ext}`;
+      }
     };
   }
   options.maxFileSize = 4000 * 1024 * 1024;

@@ -3,7 +3,7 @@ import event from "../../../../lib/studentevents.js";
 import { connectToDB } from "../../../../lib/connectDB.js";
 import { NextRequest ,NextResponse} from "next/server"
 import { useParams } from 'next/navigation'
-var mongoose = require('mongoose');
+
 interface Props {
   params: {
 id: string

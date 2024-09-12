@@ -1,6 +1,6 @@
 
 
-import Accounttypcon  from "../../../../components/accounttypecomponent.js";
+import Accounttypcon  from "../../../components/accounttypecomponent.js";
 
 
 
