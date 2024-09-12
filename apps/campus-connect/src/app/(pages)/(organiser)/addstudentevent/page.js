@@ -5,8 +5,10 @@
 "use client"
 
 import { useState } from "react"
+import {getUserSession} from "../../../../lib/session"
+
+
 export default function Page() {
-    
    
     const [form, setform] = useState({
         _id:"",
@@ -72,13 +74,15 @@ export default function Page() {
 
        
         e.preventDefault()
+        const session = await getUserSession()
+        console.log(session)
        ;
         
         
        const formdata  = new FormData();
 
        
-
+       formdata.append("creator",session.email)
        formdata.append("title",form.title)
        formdata.append("discription",form.discription)
        formdata.append("image",form.image||"")
