@@ -35,9 +35,9 @@ export default withAuth(
       return NextResponse.next()
     }
 
-    if (!isAuth && isAccessingSensitiveRoute) {
-      return NextResponse.redirect(new URL('/login', req.url))
-    }
+    // if (!isAuth && isAccessingSensitiveRoute) {
+    //   return NextResponse.redirect(new URL('/login', req.url))
+    // }
 
     if (pathname === '/') {
        console.log(isAuth?.type) 
