@@ -125,9 +125,6 @@ const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET!
       console.log(session)
 
       return session
-    },
-    redirect() {
-      return '/home'
-    },
+    }
   },
 }
