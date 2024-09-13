@@ -27,12 +27,40 @@ export default withAuth(
       pathname.startsWith(route)
     )
 
-    
-   
+    if (isLoginPage) {
+      if (isAuth) {
+        return NextResponse.redirect(new URL('/home', req.url))
+      }
 
+      return NextResponse.next()
+    }
+
+    if (!isAuth && isAccessingSensitiveRoute) {
+      return NextResponse.redirect(new URL('/login', req.url))
+    }
+
+    if (pathname === '/') {
+       console.log(isAuth?.type) 
+      return NextResponse.redirect(new URL('/home', req.url))
+    }
     
-    
-   
+    if (isAuth?.type=="not" && isAccessingSensitiveRoute) {
+  
+        return NextResponse.redirect(new URL('/chooseprofiletype', req.url))
+      }
+
+      if (isAuth?.prefrence.length < 1 && isAuth?.type =="student" &&isAccessingSensitiveRoute) {
+  
+        return NextResponse.redirect(new URL('/prefrence', req.url))
+      }
+      if (isAuth?.prefrence.length >= 1  && pathname === '/prefrence') {
+  
+        return NextResponse.redirect(new URL('/', req.url))
+      }
+      if (isAuth?.type=="student" && pathname === '/chooseprofiletype') {
+        
+              return NextResponse.redirect(new URL('/', req.url))
+            }
   },
   {
     callbacks: {
