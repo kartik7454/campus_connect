@@ -45,7 +45,7 @@ export default withAuth(
     }
     
     if (isAccessingSensitiveRoute) {
-  
+  console.log(isAuth)
         return NextResponse.redirect(new URL('/chooseprofiletype', req.url))
       }
 
