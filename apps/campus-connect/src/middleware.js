@@ -44,7 +44,7 @@ export default withAuth(
       return NextResponse.redirect(new URL('/home', req.url))
     }
     
-    if (isAccessingSensitiveRoute) {
+    if (isAuth && pathname === '/home') {
   console.log(isAuth)
         return NextResponse.redirect(new URL('/chooseprofiletype', req.url))
       }
