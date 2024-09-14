@@ -35,17 +35,17 @@ export default withAuth(
       return NextResponse.next()
     }
 
-    // if (!isAuth && isAccessingSensitiveRoute) {
-    //   return NextResponse.redirect(new URL('/login', req.url))
-    // }
+    if (!isAuth && isAccessingSensitiveRoute) {
+      return NextResponse.redirect(new URL('/login', req.url))
+    }
 
     if (pathname === '/') {
        console.log(isAuth?.type) 
       return NextResponse.redirect(new URL('/home', req.url))
     }
     
-    if (isAuth && pathname === '/home') {
-  console.log(isAuth)
+    if (isAuth?.type=="not" && isAccessingSensitiveRoute) {
+  
         return NextResponse.redirect(new URL('/chooseprofiletype', req.url))
       }
 
