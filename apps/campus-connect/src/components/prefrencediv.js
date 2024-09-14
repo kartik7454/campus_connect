@@ -5,13 +5,13 @@
 
 import { useState,useEffect } from "react"
 import Link from "next/link";
-
+import { useSession } from "next-auth/react"
 
 export default function Prefrencediv(props) {
 const [pref, setpref] = useState([])
 let array =['tech', 'business','art',"sports"]  
 
-
+const {update}=useSession()
  async function  handelclick(){
     
   const response1 = await fetch('/setprefrence',{
@@ -20,7 +20,7 @@ let array =['tech', 'business','art',"sports"]
     
 })
    
-
+await update({ prefrence: pref })
 
     if(response1.ok){window.location.href="/home"}
  }

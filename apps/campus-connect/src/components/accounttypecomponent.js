@@ -1,15 +1,16 @@
-/* eslint-disable no-unused-vars */
+
 "use client"
 
+import { useSession } from "next-auth/react"
 
 import React  from 'react';
-import { useRouter } from 'next/navigation'
+
 
 
   export default  function Accounttypcon() {
     
-
-
+const {update}=useSession()
+     
     async function handelclick(value){
       
      
@@ -23,7 +24,7 @@ import { useRouter } from 'next/navigation'
 
         
     })
-    
+    await update({ type: value })
    
     
    
