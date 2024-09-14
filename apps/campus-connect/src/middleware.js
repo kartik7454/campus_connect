@@ -22,7 +22,7 @@ export default withAuth(
     
     const isLoginPage = pathname.startsWith('/login')
 
-    const sensitiveRoutes = ['/home','/menu','/dashboard','/cart','https://spark-starter-kit-main.vercel.app/home']
+    const sensitiveRoutes = ['/home','/menu','/dashboard','/cart']
     const isAccessingSensitiveRoute = sensitiveRoutes.some((route) =>
       pathname.startsWith(route)
     )
@@ -44,7 +44,7 @@ export default withAuth(
       return NextResponse.redirect(new URL('/home', req.url))
     }
     
-    if (isAuth?.type=="not" && isAccessingSensitiveRoute) {
+    if (isAuth?.type=="not" && pathname === '/home') {
   
         return NextResponse.redirect(new URL('/chooseprofiletype', req.url))
       }
