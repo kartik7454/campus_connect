@@ -44,23 +44,23 @@ export default withAuth(
       return NextResponse.redirect(new URL('/home', req.url))
     }
     
-    // if (isAuth?.type=="not" && isAccessingSensitiveRoute) {
+    if (isAuth?.type=="not" && isAccessingSensitiveRoute) {
   
-    //     return NextResponse.redirect(new URL('/chooseprofiletype', req.url))
-    //   }
+        return NextResponse.redirect(new URL('/chooseprofiletype', req.url))
+      }
 
-    //   if (isAuth?.prefrence.length < 1 && isAuth?.type =="student" &&isAccessingSensitiveRoute) {
+      if (isAuth?.prefrence.length < 1 && isAuth?.type =="student" &&isAccessingSensitiveRoute) {
   
-    //     return NextResponse.redirect(new URL('/prefrence', req.url))
-    //   }
-      // if (isAuth?.prefrence.length >= 1  && pathname === '/prefrence') {
+        return NextResponse.redirect(new URL('/prefrence', req.url))
+      }
+      if (isAuth?.prefrence.length >= 1  && pathname === '/prefrence') {
   
-      //   return NextResponse.redirect(new URL('/', req.url))
-      // }
-      // if (isAuth?.type=="student" && pathname === '/chooseprofiletype') {
+        return NextResponse.redirect(new URL('/', req.url))
+      }
+      if (isAuth?.type=="student" && pathname === '/chooseprofiletype') {
         
-      //         return NextResponse.redirect(new URL('/', req.url))
-      //       }
+              return NextResponse.redirect(new URL('/', req.url))
+            }
   },
   {
     callbacks: {
