@@ -1,6 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
  
-;
+
+import Image from 'next/image';
 import videoplayback from '../../../../../campus-connect/videos/Snapinsta.app_video_3C4B2CC5404098BEB3DC8C0045BB878B_video_dashinit.mp4.json';
 // eslint-disable-next-line no-unused-vars
 import Prefrence from "../../../components/pefrencediv.js"
@@ -11,11 +12,11 @@ export default function Home() {
     
     return (
       <div>
-       <img
+       <Image
           className='h-80 w-48 object-cover rounded-lg '
-        src={"/static/images/download.jpeg"}
-    
-       
+        src={"/images/download.jpeg"}
+    width={200}
+    height={200}
         alt={"img"}
         
         
