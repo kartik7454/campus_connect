@@ -37,7 +37,7 @@ setsponsor(session.type)
             
             })
     return (
-      <div className="bg-slate-100 absolute right-20 top-24  w-7/12" >
+      <div className="bg-slate-100 absolute right-20 top-24  w-7/12 rounded-xl pb-10" >
         
          {events?(events.filter((item)=>{ 
           if(sponsor == "student"){return item}

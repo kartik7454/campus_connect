@@ -54,6 +54,7 @@ const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET!
       token.followers =user1?.followers
       token.prefrence =user1?.prefrence
       token.id = user1?.id
+      token.about = user1?.about
      }
         
         
@@ -76,6 +77,7 @@ const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET!
               name: profile.name,
               image:user.image,
               type:'not',
+              about:'',
               followers:[],
               prefrence:[]
             },
@@ -94,7 +96,7 @@ const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET!
         token.type=user1?.type
         token.followers=user1?.followers
       token.prefrence=user1?.prefrence
-       
+      token.about=user1?.about
       }
 
       
@@ -117,6 +119,7 @@ const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET!
         session1.email = token.email
         session1.image = token.image
         session1.type = token.type
+        session1.about = token.about
         session1.followers = token.followers
         session1.prefrence = token.prefrence  }
        

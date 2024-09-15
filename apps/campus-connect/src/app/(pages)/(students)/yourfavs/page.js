@@ -43,6 +43,7 @@ export default function Home() {
          
     return (
       <div>
+      <h1 className="mb-4 text-4xl font-extrabold capitalize leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black text-center">your favs</h1>
     {event?(event.map((item)=>{
       
       return(<div className='inline'> <Link href={"/studentevents/"+item.item._id}><Events 

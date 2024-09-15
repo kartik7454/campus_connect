@@ -10,18 +10,22 @@ console.log(value)
   let arr =  filter
   arr[id]=value
 
-
+  
 setfilter(arr)
       props.filteroptions(arr)
     }
-
+async function reset(){
+    setfilter(["all","all","all","all","all","all"])
+    let arr =  ["all","all","all","all","all","all"]
+    props.filteroptions(arr)
+  }
     return (
       <div>
        
-<div className="bg-slate-300 w-96 ml-28">
-  <h1 >filters</h1>  
-  <a href="searchcommunity" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">search events</a>
-    <div className="h-10 bg-slate-400 overflow-hidden hover:h-auto ">
+<div className="bg-slate-300 w-96 ml-28 rounded-lg px-2 py-5">
+<h1 className="font-bold text-2xl capitalize text-center mb-5 " >filter</h1>    
+
+    <div className="h-10 bg-slate-400 overflow-hidden hover:h-auto mb-2 ">
 
     <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">category <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
@@ -51,9 +55,9 @@ setfilter(arr)
 </div>
 
     </div> 
-    <div className="h-10 bg-slate-400 overflow-hidden hover:h-auto ">
+    <div className="h-10 bg-slate-400 overflow-hidden hover:h-auto  mb-2 ">
 
-    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">department <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">city <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
 </svg>
 </button>
@@ -79,7 +83,7 @@ setfilter(arr)
 
     </div>
 
-    <div className="h-10 bg-slate-400 overflow-hidden hover:h-auto ">
+    <div className="h-10 bg-slate-400 overflow-hidden hover:h-auto  mb-2 ">
 
 <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">likes <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
@@ -101,6 +105,8 @@ setfilter(arr)
 
 
 </div>
+<button onClick={  ()=>{reset()} } id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white   w-full  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  text-center inline-flex items-center dark:bg-red-500 dark:hover:bg-red-600 dark:focus:ring-blue-800" type="button">remove filters 
+</button>
 </div>
 
         </div>

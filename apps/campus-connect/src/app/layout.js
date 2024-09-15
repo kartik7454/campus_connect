@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html>
 {/* <Provider> */}
-<body className="h-20 overflow-x-hidden">
+<body className=" overflow-x-hidden">
         <div className="  ">
           <Navbar/>
       <aside className=''>

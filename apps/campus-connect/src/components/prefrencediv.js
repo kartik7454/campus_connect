@@ -28,19 +28,30 @@ await update({ prefrence: pref })
       <div  >
 
        
-{array.map((item)=>{return(<div>
+{array.map((item)=>{return(<div className="inline">
 
-  <button onClick={(e)=>{
-    console.log(e.target.value)
-    let arr =  pref
+  <input onClick={(e)=>{
+    if(e.target.checked){let arr =  pref
+      
+      
+      
+      console.log(e.target.value)
+    
     let  alo =  arr.push(e.target.value)
     console.log(arr)
-    setpref(arr)
-  }} type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" value={item}>{item}</button>
+    setpref(arr)}
+    else{let arr =  pref
+    const alo = arr.filter((item)=>{return item  !==e.target.value})
+    console.log(alo)
+    setpref(alo)
+    }
+    
+  }} type="checkbox" class="px-5 py-3 mx-5 text-base font-medium text-center text-white  bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" value={item}></input>
+  <h1 className="inline font-bold text-xl capitalize">{item}</h1>
 </div>)})}
        
 
-       <button onClick={()=>{handelclick()}   }>submit</button>
+       <button className="px-5 py-3 mx-5 text-base font-medium text-center mt-10 block text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={()=>{handelclick()}   }>submit</button>
         </div>
         
       

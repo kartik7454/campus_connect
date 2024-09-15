@@ -43,9 +43,9 @@ const {update}=useSession()
     }
     return (
         
-      <div className="text-center">
+      <div className=" absolute top-72 right-1/3 mr-10">
        
-       <h1>choose account type</h1>
+       <h1 className="text-5xl font-bold mb-10">Choose Account Type</h1>
        <button type="button" className="px-5 py-3 mx-5 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"value="student" onClick={  (e)=>{handelclick(e.target.value)} }>Student</button>
        <button type="button" className="px-5 py-3 mx-5 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" value="organiser" onClick={  (e)=>{handelclick(e.target.value)} }>Organiser</button>
        <button type="button" className="px-5 py-3 mx-5 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" value="sponsor" onClick={  (e)=>{handelclick(e.target.value)} }>Sponsor</button>

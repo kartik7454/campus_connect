@@ -56,7 +56,7 @@ export default function Home() {
 </div>):null}
 
 <div>
-<h1 className='mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black text-center'>my  events </h1>
+<h1 className='mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black text-center capitalize'>my  communities </h1>
 {event?(   <div>{event.map((item)=>{return(<div> <Link href={"/studentevents/"+item._id}><h1 className='mb-4  font-semibold leading-none tracking-tight text-gray-900 md:text-lg lg:text-3xl dark:text-black text-center'>{item.title}</h1></Link></div>)})}</div>):null}
 </div>
 

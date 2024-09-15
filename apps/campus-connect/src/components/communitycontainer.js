@@ -36,7 +36,7 @@ export default function EventsContainer(props) {
             
             })
     return (
-      <div className="bg-slate-100 absolute right-20 top-24  w-7/12" >
+      <div className="bg-slate-100 absolute right-20 top-24  w-7/12 rounded-xl" >
         
          {events?(events.filter((item)=>{
           let arr =filter

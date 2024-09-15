@@ -64,7 +64,7 @@ import { useState,useEffect } from "react"
                         return (bhalu.includes(filter.toLowerCase()) ||bhalu2.includes(filter.toLowerCase()))  }
 
 
-            }).map((item)=>{return<div><Link href={"/studentevents/"+item._id}><Events 
+            }).map((item)=>{return<div className="inline"><Link href={"/studentevents/"+item._id}><Events 
          title={item.title} 
 discription={item.discription}
 category={item.category}

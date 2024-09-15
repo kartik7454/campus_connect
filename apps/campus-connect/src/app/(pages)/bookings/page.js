@@ -33,8 +33,8 @@ export default function Filterbar(props) {
                 },[])
     
 
-    return (<div><h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black text-center">bookings done by you</h1>
-    <div className="">{bookings?(bookings.map((item)=>{return<div  className=""><Link href={"/studentevents/"+item.eventid}><h1 className="mb-4 text-lg font-semibold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black text-center">{item.title}</h1></Link></div>})):null}
+    return (<div><h1 className="mb-4 text-4xl font-extrabold capitalize leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black text-center">bookings done by you</h1>
+    <div className="">{bookings?(bookings.map((item)=>{return<div  className=""><Link href={"/studentevents/"+item.eventid}><h1 className="mb-4 text-lg capitalize font-semibold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black text-center">{item.title}</h1></Link></div>})):null}
     
     
     
