@@ -14,7 +14,7 @@ export default function Events(props) {
           <div className="  rounded-lg">
             <img
           className='h-80 w-48 object-cover rounded-lg '
-        src={"./images/"+props.image}
+        src={"/images/"+props.image}
     
        
         alt={"img"}
