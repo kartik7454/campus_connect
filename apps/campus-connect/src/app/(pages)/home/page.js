@@ -13,7 +13,7 @@ export default function Home() {
       <div>
        <img
           className='h-80 w-48 object-cover rounded-lg '
-        src={"/images/download.jpeg"}
+        src={"/static/images/download.jpeg"}
     
        
         alt={"img"}
