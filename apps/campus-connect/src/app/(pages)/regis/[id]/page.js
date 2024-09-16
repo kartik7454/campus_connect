@@ -18,10 +18,9 @@ export default function Home() {
     let id = router.id
     useEffect( ()=>{
     const fetchtodo  = async ()=>{
-          const session= await getUserSession()
-      
+      console.log(id)
               
-            const response = await fetch ('/my-events/'+session.email)
+            const response = await fetch ('/participants/'+id)
             const json = await response.json()
             
             
@@ -44,24 +43,19 @@ export default function Home() {
             },[])
 
             
+           
+                       
 
                           
     return (
 
-      <div>   
+      <div className='ml-20'>   
 
-{user ?(<div>  
-
-<h1>{user.name}</h1> 
-
+{event ?(<div>  
+<h1 className='font-extrabold text-4xl capitalize'>number of registers :{event.length}</h1>
+<hi>{event.map((item)=>{return <h1 className='font-semibold text-xl capitalize my-5'> name :{item.name} email:{item.email}</h1>})}</hi>
 </div>):null}
 
-<div>
-<h1 className='mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black text-center capitalize'>my  events </h1>
-{event?(   <div>{event.map((item)=>{return(<div className='text-center'> <Link href={"/studentevents/"+item._id}><h1 className='mb-4 inline font-semibold leading-none tracking-tight text-gray-900 md:text-lg lg:text-3xl dark:text-black text-center'>{item.title}</h1></Link>
-  <Link href={"regis/"+item._id}><button  className='inline border-2 border-black w-20'>see</button></Link>
-</div>)})}</div>):null}
-</div>
 
 
 

@@ -65,7 +65,7 @@ console.log(user.prefrence[0])
             
             
             },[])
-    return (<div className=''><h1 className='mb-4 text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black capitalize text-center my-10'>  Popular events  in {user?user.prefrence[0]:null}</h1>
+    return (<div className=''><h1 className='mb-4 text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black capitalize text-center my-10 underline decoration-solid'>  Popular events  in {user?user.prefrence[0]:null}</h1>
     
     <div className="  overflow-x-hidden " >
         
@@ -86,7 +86,7 @@ likes={item.likes}
          /></Link></div>})}</div>):null }
        
         </div>
-        <div>{user?.prefrence[1]?(<div><h1  className='mb-4 text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black capitalize text-center my-10'> most popular events  in {user?user.prefrence[1]:null}</h1>
+        <div>{user?.prefrence[1]?(<div><h1  className='mb-4 text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black underline decoration-solid capitalize text-center my-10'>  popular events  in {user?user.prefrence[1]:null}</h1>
     <div className=" w-full overflow-x-hidden " >
         
         {   events?(<div >{events.filter((item)=>{return item.category ==user.prefrence[1] }).sort((a, b) =>{ 
@@ -107,7 +107,7 @@ likes={item.likes}
        
         </div></div>):null}  </div>
 
-        <h1  className='mb-4 text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black capitalize text-center my-10'>  communities  in {user?user.prefrence[0]:null}</h1>
+        <h1  className='mb-4 text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black capitalize text-center underline decoration-solid my-10'>  communities  in {user?user.prefrence[0]:null}</h1>
     <div className=" w-full overflow-x-hidden " >
         
         {   comm?(<div >{comm.filter((item)=>{return item.category ==user?.prefrence[0] }).sort((a, b) =>{ 
