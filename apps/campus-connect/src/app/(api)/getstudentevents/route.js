@@ -3,6 +3,7 @@ import events from "../../../lib/studentevents.js";
 import { connectToDB } from "../../../lib/connectDB.js";
 import { NextRequest ,NextResponse} from "next/server"
 
+export const dynamic = 'force-dynamic';
 export  async function GET(request) {
   try {
     
