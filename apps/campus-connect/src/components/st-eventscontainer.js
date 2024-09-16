@@ -15,7 +15,9 @@ export default function EventsContainer(props) {
   useEffect( ()=>{
     const fetchtodo  = async ()=>{
       const session = await session_new()
-            const response = await fetch ('/getstudentevents')
+            const response = await fetch ('/getstudentevents', {
+              cache: 'no-store',
+            })
             const json = await response.json()
             setfilter(props.filteropt)
             
