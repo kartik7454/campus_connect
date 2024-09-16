@@ -45,8 +45,8 @@ export default function Page() {
 
    
   return <div className="px-32 pb-20">
-  <h1>thanks for booking </h1>
-  <h1>you will recive your ticket on email </h1>
+  <h1 className="text-5xl font-extrabold capitalize text-center">thanks for booking </h1>
+  <h1 className="text-2xl font-bold capitalize text-center mt-10">you will recive your ticket on email... </h1>
     </div>
   }
 

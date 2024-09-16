@@ -120,7 +120,12 @@ const session =await getUserSession()
                                           }
                                           if (response.ok){
                                             router1.push("/submited/"+json.msg)
-                                            console.log("hi")
+                                            
+                                            const response = await fetch('/ticket',{
+                                              method:"POST",
+                                              body :  JSON.stringify(booking.email) //convert to json from object
+                                              
+                                          })
                                           }
                                         }
     return (

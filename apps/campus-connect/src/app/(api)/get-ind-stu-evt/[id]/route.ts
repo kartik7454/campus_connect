@@ -3,7 +3,7 @@ import events from "../../../../lib/studentevents.js";
 import { connectToDB } from "../../../../lib/connectDB.js";
 import { NextRequest ,NextResponse} from "next/server"
 import { useParams } from 'next/navigation'
-var mongoose = require('mongoose');
+import mongoose from 'mongoose';
 interface Props {
   params: {
 id: string
@@ -15,7 +15,7 @@ export  async function GET(request:NextRequest,Props:Props) {
   try { await connectToDB()
     const {params } = Props  
     const {id } = params
-    var objectId = new mongoose.Types.ObjectId(id)
+    const objectId = new mongoose.Types.ObjectId(id)
    
     const itemExists  =await events.findOne({_id:objectId})
     // console.log("hi")

@@ -6,18 +6,14 @@ import { getUserSession  } from '../../../lib/session'
 
 export async function POST(request: NextRequest) {
     try {
-    //     const body = await request.json()
+        const body = await request.json()
                 
-    // console.log("hii")
-    // console.log(body)
-    const session= await  getUserSession()
-    if(session.email){const user = await prisma.user.findUnique({
-        where: {
-          email: session.email,
-        },
-      })
+     console.log("hii")
+     console.log(body)
+   
+   
       
-  console.log(user?.followers)
+
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -26,16 +22,16 @@ export async function POST(request: NextRequest) {
             }
         })
 
-         const maillist = user?.followers
+         
         const mailOption = {
             from: '',
             
-            to:maillist ,
+            to:body ,
             subject: "new order ",
-            html: "<p> new event</p>"
+            html: "<p>ticket</p>"
         }
 
-      await transporter.sendMail(mailOption)}
+      await transporter.sendMail(mailOption)
     
 
         return NextResponse.json({ message: "Email Sent Successfully" }, { status: 200 })
