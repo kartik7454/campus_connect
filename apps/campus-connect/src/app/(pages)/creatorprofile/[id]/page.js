@@ -102,7 +102,8 @@ export default function Home() {
 
 {user ?(<div>  
 
-<h1 className="mb-4 text-xl font-bold leading-none inline tracking-tight text-gray-900 md:text-xl lg:text-xl dark:text-black capitalize">{user.name}</h1> <button className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'>follow</button>
+<h1 className="mb-4 text-xl font-bold leading-none inline tracking-tight text-gray-900 md:text-xl lg:text-xl dark:text-black capitalize mr-5">{user.name}</h1>
+ <button className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'>follow</button>
 <h1 className="mb-4 text-xl font-bold leading-none tracking-tight text-gray-900 md:text-xl lg:text-xl dark:text-black capitalize">about</h1>
 <h1 className="mb-4 text-xl font-semibold leading-none tracking-tight text-gray-900 md:text-xl lg:text-lg dark:text-black capitalize">{user.about}</h1> 
 </div>):null}
